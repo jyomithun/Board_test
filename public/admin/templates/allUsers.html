@@ -1,0 +1,29 @@
+<div class='container'>
+    <!-- Sidebar -->
+    <div class='col-sm-12'>
+        <h3>All Users</h3>
+		<div ng-show="!users.length">No users found</div>
+		  <table class="table table-hover">
+			<thead>
+			  <tr>
+				<th>Name</th>
+				<th>Email</th>
+				<th colspan="2">-</th>
+			  </tr>
+			</thead>
+			<tbody>
+			  <tr ng-repeat='user in users track by $index'>
+				<td>{{user.name}}</td>
+				<td>{{user.email}}</td>
+				<td>
+					<button type="button" class="btn" ng-click='authUser(user._id)'>{{user.status}}</button>
+				</td>
+				<td>
+					<button type="button" class="btn btn-danger" ng-click='deleteUser(user._id)'>Delete</button>
+				</td>
+			  </tr>
+			</tbody>
+		  </table>
+    </div>
+    <!-- /Sidebar -->
+</div>

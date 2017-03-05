@@ -1,0 +1,26 @@
+<div class='container'>
+<div class="row full-height">
+    <div class='col-lg-4'></div>
+    <div class='col-lg-4'>
+      <div class='form-group'>
+	  	<div class="{{action.type}}">{{action.msg}}</div>
+        <input type='text' placeholder='Title' ng-model='post.title' name='title' class='form-control'>
+      </div>
+      <div class='form-group'>
+        <textarea class="form-control col-md-6t" ng-model='post.body' placeholder='Write your post here...'></textarea>
+      </div>
+      <div class='form-group'>
+		<label class="radio-inline" ng-init="post.type=0">
+		  <input type="radio" ng-model='post.type' ng-value="0" name="type">Public
+		</label>
+		<label class="radio-inline">
+		  <input type="radio" ng-model='post.type' ng-value="1" name="type">Private
+		</label>
+      </div>
+      <div class='form-group'>
+        <div class='btn btn-success pull-right' ng-click='addPost(post)'>Publish Post</div>
+      </div>
+    </div>
+	<div class='col-lg-4'></div>
+</div>
+</div>

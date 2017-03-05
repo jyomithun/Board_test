@@ -1,0 +1,21 @@
+<div class='container'>
+<div class="row full-height">
+    <div class='col-lg-4'></div>
+    <div class='col-lg-4'>
+      <div class='form-group'>
+	  	<div class="{{action.type}}">{{action.msg}}</div>
+        <input type='text' placeholder='Name' ng-model='user.name' name='name' class='form-control'>
+      </div>
+      <div class='form-group'>
+        <input type='text' placeholder='E-mail' ng-model='user.email' name='email' class='form-control'>
+      </div>
+      <div class='form-group'>
+        <input type='text' placeholder='Password' ng-model='user.password' name='password' class='form-control'>
+      </div>
+      <div class='form-group'>
+        <div class='btn btn-success pull-right' ng-click='addUser(user)'>Create User</div>
+      </div>
+    </div>
+	<div class='col-lg-4'></div>
+</div>
+</div>
